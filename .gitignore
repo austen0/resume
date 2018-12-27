@@ -1,0 +1,9 @@
+*.aux
+*.bak
+*.gz
+*.log
+
+# Files containing personal information.
+*.pdf
+pii.sh
+resume.final.tex

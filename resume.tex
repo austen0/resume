@@ -1,0 +1,198 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+
+% ----------------------------------- Doc Config ------------------------------
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+
+% -------------------------------------- Macros -------------------------------
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{#1}}%
+    \item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{-0.5#1}}%
+    \item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #1 &
+    #2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+
+% ------------------------------------- Content -------------------------------
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{::name::}}
+
+::email::\ \ \textbullet
+\ \ ::phone::\ \ \textbullet
+\ \ ::website::
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{WORK EXPERIENCE}
+
+\begin{itemize}
+    \parskip=0.1em
+
+    \item
+    \headerrow
+        {\textbf{Senior Consultant}}
+        {\textbf{Nov. 2016 -- Jan. 2018}}
+    \\
+    \headerrow
+        {\emph{::company 3 name::}}
+        {\emph{::company 3 city::}}
+    \begin{itemize*}
+        \item Managed five other consultants and was responsible for managing project
+        tracking, delegating incoming tasks, running weekly team syncs, and handling
+        escalations.
+        \item Conducted performance reviews with reports, both recognizing their
+        accomplishments and providing them with actionable feedback on areas where
+        they could devote additional focus.
+        \item Wrote high-level documentation which provided our team and external
+        stakeholders with a general understanding of how various internal systems
+        functioned and impacted their processes.
+        \item Created custom spreadsheet formulas to calculate support ticket metrics
+        with over 60\% higher accuracy than previous methods, giving better insight
+        into how team resources were being utilized.
+    \end{itemize*}
+
+    \item
+    \headerrow
+        {\textbf{Consultant}}
+        {\textbf{Oct. 2015 -- Nov. 2016}}
+    \\
+    \headerrow
+        {\emph{::company 3 name::}}
+        {\emph{::company 3 city::}}
+    \begin{itemize*}
+        \item Streamlined the process for creating custom access controls for tools
+        on the internal network and applied to over 250 tools, allowing broad network
+        access to be revoked for over 60\% of vendor users in our organization.
+        \item Developed rules and data feeds for the client’s access monitoring
+        system, which detected 300+ new anomalies in 6 months with over 95\%
+        accuracy.
+        \item Created and maintained SQL tables that provided aggregate sources of
+        frequently used data, that were integrated into numerous projects owned by
+        both ours and partner teams.
+        \item Regularly assisted other teams with projects that would support our
+        objectives, leveraging extensive knowledge of internal systems and creative
+        problem solving ability.
+    \end{itemize*}
+
+    \item
+    \headerrow
+        {\textbf{Analyst}}
+        {\textbf{Dec. 2014 -- Oct. 2015}}
+    \\
+    \headerrow
+        {\emph{::company 2 name::}}
+        {\emph{::company 2 city::}}
+    \begin{itemize*}
+        \item Created and maintained automated access management configurations which
+        eliminated the need for manually processing requests from over 15k users.
+        \item Developed queries and dashboards to provide team leadership with easily
+        digestible data on progress in limiting sensitive access held by vendor users
+        within the organization.
+        \item Wrote and maintained extensive documentation on operational processes
+        which was a primary resource in training seven new team members.
+    \end{itemize*}
+
+    \item
+    \headerrow
+        {\textbf{Business Operations Specialist}}
+        {\textbf{May 2013 -- May 2014}}
+    \\
+    \headerrow
+        {\emph{::company 1 name::}}
+        {\emph{::company 1 city::}}
+    \begin{itemize*}
+        \item Managed relationship with our distributor, ensuring that they were
+        meeting SLA and quickly resolving issues that negatively impacted fulfillment
+        times.
+        \item Collected and analyzed data to identify internal processes that needed
+        to be streamlined and improved.
+        \item Personally managed order fulfillment, number porting services, and
+        billing for 500+ beta testers. Also monitored beta tester accounts to
+        identify indications of fraud or abuse of the system
+    \end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{EDUCATION}
+
+\begin{itemize}
+    \parskip=0.1em
+
+    \item
+    \headerrow
+        {\textbf{Bachelor of Science, Political Science}}
+        {\textbf{Graduated May 2013}}
+    \\
+    \headerrow
+        {\emph{::university name::}}
+        {\emph{::university city::}}
+    \begin{itemize*}
+        \item \textbf{Coursework:} Calculus 1-3, Differential Equations, Linear
+        Algebra, Physics 1-2, Circuits 1, Mechanics
+    \end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{TECHNICAL SKILLS}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+SQL\ \ \textbullet
+\ \ Python\ \ \textbullet
+\ \ JavaScript\ \ \textbullet
+\ \ Bash\ \ \textbullet
+\ \ Unit Testing\ \ \textbullet
+\ \ Process Scripting/Automation
+
+Process Documentation\ \ \textbullet
+\ \ Data Analysis/Reporting\ \ \textbullet
+\ \ Troubleshooting\ \ \textbullet
+\ \ MS Office/gSuite
+\end{description*}
+\end{indentsection}
+
+\end{document}
