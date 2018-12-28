@@ -17,4 +17,3 @@ sed -i -e "s/::company 2 name::/${company_2_name}/g" $OUTPUT_FILE
 sed -i -e "s/::company 2 city::/${company_2_city}/g" $OUTPUT_FILE
 sed -i -e "s/::company 3 name::/${company_3_name}/g" $OUTPUT_FILE
 sed -i -e "s/::company 3 city::/${company_3_city}/g" $OUTPUT_FILE
-cat $OUTPUT_FILE

@@ -4,6 +4,6 @@
 *.log
 
 # Files containing personal information.
-*.pdf
 pii.sh
 resume.final.tex
+resume.final.pdf
